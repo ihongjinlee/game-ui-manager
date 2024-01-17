@@ -16,12 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className={`dark`}>
       <body className={`${openSans.className} flex flex-col overflow-y-hidden`}>
-        <header className='z-10 border-b border-gray-200 bg-white'>
+        <header className='z-10 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900'>
           <Navbar />
         </header>
-        <main className='grow bg-white'>{children}</main>
+        <main className='grow bg-white dark:bg-gray-800'>{children}</main>
       </body>
     </html>
   );

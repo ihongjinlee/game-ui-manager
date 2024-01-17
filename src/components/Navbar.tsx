@@ -3,6 +3,7 @@
 import packageJson from '../../package.json';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import DarkModeToggleButton from './DarkModeToggleButton';
 
 const menu = [
   {
@@ -23,7 +24,7 @@ export default function Navbar() {
   const pathName = usePathname();
 
   return (
-    <div className='flex justify-between items-center h-[90px] px-4 py-1 text-gray-900'>
+    <div className='flex justify-between items-center h-[90px] px-4 py-1 text-gray-900 dark:text-gray-300'>
       <div className='flex items-end'>
         <h1 className='text-2xl'>
           <Link href={`/`}>GAME UI</Link>
@@ -38,7 +39,9 @@ export default function Navbar() {
             <li
               key={href}
               className={`${
-                pathName?.split('/')[1] === href ? 'text-lg font-bold' : ''
+                pathName?.split('/')[1] === href
+                  ? 'text-lg font-bold dark:text-yellow-400'
+                  : ''
               }`}
             >
               <Link href={`/${href}`}>{name}</Link>
@@ -46,7 +49,13 @@ export default function Navbar() {
           ))}
         </ul>
       </nav>
-      <div></div>
+      <div>
+        <ul>
+          <li>
+            <DarkModeToggleButton />
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
