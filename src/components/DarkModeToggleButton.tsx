@@ -6,8 +6,8 @@ export default function DarkModeToggle() {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   const handleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle('dark', !isDarkMode);
+    setIsDarkMode((prevMode) => !prevMode);
+    document.documentElement.classList.toggle('dark');
   };
 
   return (
