@@ -46,13 +46,15 @@ export default function Navbar() {
 
   return (
     <div className='flex justify-between items-center h-[90px] px-4 py-1 text-gray-900 dark:text-gray-300'>
-      <div className='flex items-end'>
+      <div className='flex flex-col items-start'>
         <h1 className='text-2xl'>
           <Link href={`/`}>GAME UI</Link>
         </h1>
-        <h2 className='text-sm text-center text-gray-500 ml-2 hover:text-gray-400'>
-          ver{packageJson.version}
-        </h2>
+        {process.env.NEXT_PUBLIC_RUN_MODE !== 'production' && (
+          <h2 className='text-sm text-center text-gray-500'>
+            {process.env.NEXT_PUBLIC_RUN_MODE} v{packageJson.version}
+          </h2>
+        )}
       </div>
       <nav>
         <ul className='flex gap-6 items-center'>
