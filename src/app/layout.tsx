@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
 import Navbar from '@/components/Navbar';
+import SWRConfigContext from '@/context/SWRConfigContext';
 
 const openSans = Open_Sans({ subsets: ['latin'] });
 
@@ -21,7 +22,9 @@ export default function RootLayout({
         <header className='z-10 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900'>
           <Navbar />
         </header>
-        <main className='grow bg-white dark:bg-gray-800'>{children}</main>
+        <main className='grow bg-white dark:bg-gray-800'>
+          <SWRConfigContext>{children}</SWRConfigContext>
+        </main>
       </body>
     </html>
   );
