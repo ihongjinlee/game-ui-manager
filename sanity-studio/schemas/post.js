@@ -19,8 +19,8 @@ export default {
       type: 'date',
     },
     {
-      title: 'memebers',
-      name: 'memebers',
+      title: 'members',
+      name: 'members',
       type: 'array',
       of: [
         {

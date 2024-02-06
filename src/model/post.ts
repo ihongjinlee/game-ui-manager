@@ -5,7 +5,7 @@ export type Post = {
   title: string;
   description: string;
   releasedate: string;
-  memebers: User[];
+  members: User[];
   url: string;
   photo: string;
 };
