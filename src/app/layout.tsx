@@ -17,12 +17,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className={`dark`}>
-      <body className={`${openSans.className} flex flex-col overflow-y-hidden`}>
-        <header className='z-10 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900'>
+    <html lang='en'>
+      <body
+        className={`${openSans.className} w-full bg-neutral-100 dark:bg-gray-800 overflow-auto`}
+      >
+        <header className='sticky top-0 z-10 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900'>
           <Navbar />
         </header>
-        <main className='grow bg-white dark:bg-gray-800 h-[calc(100vh-70px)] sm:h-[calc(100vh-90px)] overflow-x-hidden overflow-y-scroll'>
+        <main className='w-full flex justify-center max-w-screen-xl mx-auto'>
           <SWRConfigContext>{children}</SWRConfigContext>
         </main>
       </body>
