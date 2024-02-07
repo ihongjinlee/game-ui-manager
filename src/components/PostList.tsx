@@ -16,7 +16,7 @@ export default function PostList() {
         </div>
       )}
       {posts && (
-        <div className='m-8'>
+        <div className='m-4'>
           <ul className='grid gap-4 grid-cols-1'>
             {posts.map((post, index) => (
               <li key={post.id}>

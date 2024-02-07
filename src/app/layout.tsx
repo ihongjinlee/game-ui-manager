@@ -22,7 +22,7 @@ export default function RootLayout({
         <header className='z-10 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900'>
           <Navbar />
         </header>
-        <main className='grow bg-white dark:bg-gray-800 overflow-x-hidden overflow-y-scroll'>
+        <main className='grow bg-white dark:bg-gray-800 h-[calc(100vh-70px)] sm:h-[calc(100vh-90px)] overflow-x-hidden overflow-y-scroll'>
           <SWRConfigContext>{children}</SWRConfigContext>
         </main>
       </body>

@@ -45,7 +45,7 @@ export default function Navbar() {
   const pathName = usePathname();
 
   return (
-    <div className='flex justify-between items-center h-[90px] px-4 py-1 text-gray-900 dark:text-gray-300'>
+    <div className='flex justify-between items-center h-[70px] sm:h-[90px] px-4 py-1 text-gray-900 dark:text-gray-300'>
       <div className='flex flex-col items-start'>
         <h1 className='text-2xl'>
           <Link href={`/`}>GAME UI</Link>

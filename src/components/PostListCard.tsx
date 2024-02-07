@@ -34,28 +34,20 @@ export default function PostListCard({
             </Link>
           ))}
         </div>
-
-        <Image
-          className='rounded-lg mt-4'
-          src={photo}
-          alt={`photo by ...`}
-          width={1920}
-          height={1080}
-          style={{
-            maxWidth: '100%',
-            height: 'auto',
-          }}
-          priority={priority}
-        />
-        <div className='flex justify-center mt-1 p-1'>
-          {url && (
-            <a href={url} target='_blank'>
-              <p className='bg-yellow-500 hover:bg-yellow-600 text-black rounded-lg px-40 text-center'>
-                more...
-              </p>
-            </a>
-          )}
-        </div>
+        <a href={url} target='_blank'>
+          <Image
+            className='rounded-lg mt-4'
+            src={photo}
+            alt={`photo by ...`}
+            width={600}
+            height={600}
+            style={{
+              maxWidth: '100%',
+              height: 'auto',
+            }}
+            priority={priority}
+          />
+        </a>
       </div>
     </article>
   );
