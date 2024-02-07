@@ -5,8 +5,12 @@ import { Post } from '@/model/post';
 import BarSpinner from './ui/BarSpinner';
 import PostListCard from './PostListCard';
 
-export default function PostList() {
-  const { data: posts, isLoading: loading } = useSWR<Post[]>('/api/posts');
+type Props = {
+  apiUrl: string;
+};
+
+export default function PostList({ apiUrl }: Props) {
+  const { data: posts, isLoading: loading } = useSWR<Post[]>(apiUrl);
 
   return (
     <section className='flex justify-center'>
