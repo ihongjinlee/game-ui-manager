@@ -18,3 +18,19 @@ export async function getUsers() {
       }));
     });
 }
+
+export async function getUserForProfile(user_id: string) {
+  return client
+    .fetch(
+      `
+      *[_type == "user" && user_id == "${user_id}"][0]{
+        ...,
+        "id":_id
+      }
+    `
+    )
+    .then((user: User) => ({
+      ...user,
+      image: urlFor(user.image, 288),
+    }));
+}

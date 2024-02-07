@@ -15,7 +15,7 @@ export default function UsersListCard({
     <Link href={`/user/${user_id}`}>
       <article className='rounded-lg shadow-md border border-gray-200 dark:border-gray-600 m-3 p-8'>
         <div className='flex justify-center'>
-          <Avatar image={image} priority={priority} />
+          <Avatar image={image} priority={priority} size={'xlarge'} />
         </div>
 
         <h1 className='text-lg font-bold text-gray-700  dark:text-gray-200 text-center mt-4'>

@@ -6,7 +6,7 @@ import UsersListCard from './UsersListCard';
 import BarSpinner from './ui/BarSpinner';
 
 export default function UsersList() {
-  const { data: users, isLoading: loading } = useSWR<User[]>('/api/users');
+  const { data: users, isLoading: loading } = useSWR<User[]>('/api/user');
 
   return (
     <section className='flex justify-center'>
@@ -16,9 +16,9 @@ export default function UsersList() {
         </div>
       )}
       {users && (
-        <ul className='mt-24 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+        <ul className='mt-4 sm:mt-24 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           {users.map((user, index) => (
-            <li key={user.user_id} className='mb-4'>
+            <li key={user.user_id}>
               <UsersListCard user={user} priority={index < 12} />
             </li>
           ))}

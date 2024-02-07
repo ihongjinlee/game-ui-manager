@@ -7,16 +7,12 @@ import { useEffect } from 'react';
 
 const menu = [
   {
-    href: 'ui',
-    name: 'UI 목록',
-  },
-  {
     href: 'year',
-    name: '연도별',
+    name: '영화',
   },
   {
     href: 'user',
-    name: '개발자',
+    name: '캐릭터',
   },
 ];
 
@@ -45,10 +41,10 @@ export default function Navbar() {
   const pathName = usePathname();
 
   return (
-    <div className='flex justify-between items-center h-[90px] px-4 py-1 text-gray-900 dark:text-gray-300'>
+    <div className='flex justify-between items-center h-[70px] sm:h-[90px] px-4 py-1 text-gray-900 dark:text-gray-300'>
       <div className='flex flex-col items-start'>
         <h1 className='text-2xl'>
-          <Link href={`/`}>GAME UI</Link>
+          <Link href={`/`}>MCU</Link>
         </h1>
         {process.env.NEXT_PUBLIC_RUN_MODE !== 'production' && (
           <h2 className='text-sm text-center text-gray-500'>
