@@ -6,7 +6,7 @@ import UsersListCard from './UsersListCard';
 import BarSpinner from './ui/BarSpinner';
 
 export default function UsersList() {
-  const { data: users, isLoading: loading } = useSWR<User[]>('/api/users');
+  const { data: users, isLoading: loading } = useSWR<User[]>('/api/user');
 
   return (
     <section className='flex justify-center'>
