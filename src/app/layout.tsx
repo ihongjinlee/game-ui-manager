@@ -10,7 +10,11 @@ const openSans = Open_Sans({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: { default: 'MCU CHARACTERS', template: 'MCU CHARACTERS | %s' },
   description: 'MCU 캐릭터와 레고',
+  metadataBase: new URL('https://mcu-characters.vercel.app/'),
   openGraph: {
+    images: '/images/mstile-150x150.png',
+  },
+  twitter: {
     images: '/images/mstile-150x150.png',
   },
 };
