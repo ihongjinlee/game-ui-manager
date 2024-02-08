@@ -45,7 +45,7 @@ export default function Navbar() {
       <div className='flex flex-col items-start'>
         <h1 className='text-2xl'>
           <Link href={`/`} aria-label='Home'>
-            MCU CHARACTERS
+            MCU 캐릭터
           </Link>
         </h1>
         {process.env.NEXT_PUBLIC_RUN_MODE !== 'production' && (
