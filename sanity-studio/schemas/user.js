@@ -18,12 +18,25 @@ export default {
       name: 'image',
       type: 'image',
     },
+    {
+      title: 'index',
+      name: 'index',
+      type: 'number',
+    },
   ],
   preview: {
     select: {
       title: 'name',
-      subtitle: 'user_id',
+      userId: 'user_id',
+      userIndex: 'index',
       media: 'image',
+    },
+    prepare({title, userId, userIndex, media}) {
+      return {
+        title,
+        subtitle: `[${userIndex}] ${userId}`,
+        media,
+      }
     },
   },
 }

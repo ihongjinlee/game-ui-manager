@@ -6,7 +6,7 @@ export async function getUsers() {
     .fetch(
       `
   *[_type=="user"] 
-  | order(user_id asc){
+  | order(index asc){
     ..., 
     "id":_id}
     `
