@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   description: 'MCU 캐릭터와 레고',
   metadataBase: new URL('https://mcu-characters.vercel.app/'),
   openGraph: {
-    images: '/images/150x150.png',
+    images: '/images/android-chrome-256x256.png',
   },
   twitter: {
-    images: '/images/150x150.png',
+    images: '/images/android-chrome-256x256.png',
   },
 };
 
