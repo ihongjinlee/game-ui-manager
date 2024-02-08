@@ -10,6 +10,9 @@ const openSans = Open_Sans({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: { default: 'MCU CHARACTERS', template: 'MCU CHARACTERS | %s' },
   description: 'MCU 캐릭터와 레고',
+  openGraph: {
+    images: '/images/mstile-150x150.png',
+  },
 };
 
 export default function RootLayout({
