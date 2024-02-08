@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import SWRConfigContext from '@/context/SWRConfigContext';
+import ThemeProvider from '@/context/ThemeContext';
 
 const openSans = Open_Sans({ subsets: ['latin'] });
 
@@ -25,7 +26,9 @@ export default function RootLayout({
           <Navbar />
         </header>
         <main className='w-full flex justify-center max-w-screen-xl mx-auto'>
-          <SWRConfigContext>{children}</SWRConfigContext>
+          <SWRConfigContext>
+            <ThemeProvider>{children}</ThemeProvider>
+          </SWRConfigContext>
         </main>
       </body>
     </html>

@@ -3,7 +3,6 @@
 import packageJson from '../../package.json';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
 
 const menu = [
   {
@@ -17,27 +16,6 @@ const menu = [
 ];
 
 export default function Navbar() {
-  useEffect(() => {
-    const darkModeMediaQuery = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    );
-
-    const toggleDarkMode = (
-      e: MediaQueryListEvent | MediaQueryList | Event
-    ) => {
-      if ('matches' in e) {
-        document.documentElement.classList.toggle('dark', e.matches);
-      }
-    };
-
-    toggleDarkMode(darkModeMediaQuery);
-    darkModeMediaQuery.addEventListener('change', toggleDarkMode);
-
-    return () => {
-      darkModeMediaQuery.removeEventListener('chagne', toggleDarkMode);
-    };
-  }, []);
-
   const pathName = usePathname();
 
   return (
