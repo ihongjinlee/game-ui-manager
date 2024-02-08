@@ -15,7 +15,7 @@ export default async function UserPage({ params: { user_id } }: Props) {
 
   return (
     <section className='w-full'>
-      <UserProfile user={user} />;
+      <UserProfile user={user} />
       <UserPosts user={user} />
     </section>
   );
