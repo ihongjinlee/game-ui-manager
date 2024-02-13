@@ -27,7 +27,7 @@ export default function PostListCard({
           {`${description}`}
         </h2>
 
-        <div className='flex mt-4 p-2 rounded-lg border border-gray-200 dark:border-gray-600 '>
+        <div className='grid grid-cols-7 sm:grid-cols-10 md:grid-cols-10 lg:grid-cols-10 mt-4 p-2 rounded-lg border border-gray-200 dark:border-gray-600'>
           {members?.map(({ image, user_id }) => (
             <Link key={user_id} href={`/user/${user_id}`}>
               <Avatar image={image} priority={priority} />
