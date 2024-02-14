@@ -25,6 +25,12 @@ export default function PostList({ apiUrl }: Props) {
             {posts.map((post, index) => (
               <li key={post.id}>
                 <PostListCard post={post} priority={index < 2} />
+                {post.releasedate.split('-')[0] !==
+                  posts[index + 1]?.releasedate.split('-')[0] && (
+                  <h1 className='flex justify-center m-10 text-4xl font-bold dark:text-white'>
+                    {post.releasedate.split('-')[0]}
+                  </h1>
+                )}
               </li>
             ))}
           </ul>
