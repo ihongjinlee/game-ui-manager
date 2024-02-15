@@ -14,6 +14,11 @@ export default {
       type: 'string',
     },
     {
+      title: 'phase',
+      name: 'phase',
+      type: 'number',
+    },
+    {
       title: 'releasedate',
       name: 'releasedate',
       type: 'date',

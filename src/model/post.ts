@@ -4,6 +4,7 @@ export type Post = {
   id: string;
   title: string;
   description: string;
+  phase: number;
   releasedate: string;
   members: User[];
   url: string;
