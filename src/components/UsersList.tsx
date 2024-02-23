@@ -17,7 +17,7 @@ export default function UsersList() {
         </div>
       )}
       {users && (
-        <ul className='mt-4 sm:mt-24 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+        <ul className='mt-4 mb-4 sm:mt-24 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           {users.map((user, index) => (
             <li key={user.user_id}>
               <UsersListCard user={user} priority={index < 12} />
