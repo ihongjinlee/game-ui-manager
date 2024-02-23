@@ -17,6 +17,7 @@ export default function PostList({ apiUrl }: Props) {
       {loading && (
         <div className='mt-72'>
           <BarSpinner />
+          <div className='h-screen' />
         </div>
       )}
       {posts && (
