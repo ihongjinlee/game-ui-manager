@@ -13,6 +13,7 @@ export default function UsersList() {
       {loading && (
         <div className='mt-72'>
           <BarSpinner />
+          <div className='h-screen' />
         </div>
       )}
       {users && (
